@@ -1,0 +1,11 @@
+{
+  "name": "genious",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "discord.js": "^11.3",
+    "discord.js-commando": "^0.9",
+    "pg-promise": "^8.3",
+    "winston": "^3"
+  }
+}
