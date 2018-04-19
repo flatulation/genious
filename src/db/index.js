@@ -6,10 +6,4 @@ const db = pgp({
   application_name: 'genious',
 });
 
-async function connect() {
-  await db.connect();
-}
-
-module.exports = exports = {
-  connect,
-};
+module.exports = exports = db;
