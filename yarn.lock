@@ -279,7 +279,7 @@ winston-transport@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/winston-transport/-/winston-transport-3.1.0.tgz#52b097176c5c26acf9c603630c57ffd575c42572"
 
-winston@^3.0.0-rc4:
+winston@^3:
   version "3.0.0-rc4"
   resolved "https://registry.yarnpkg.com/winston/-/winston-3.0.0-rc4.tgz#2e34e05b1130bae677c79b3ace993d091e678c5f"
   dependencies:
