@@ -6,17 +6,11 @@ const queryFileOptions = {
   compress: true,
 };
 
-module.exports = exports = {
-  pairs: {
-    create: sql('pairs/create.sql'),
-  }
-};
-
-function sql(filePath) {
+module.exports = exports = (filePath) => {
   filePath = path.join(__dirname, filePath);
   const queryFile = new QueryFile(filePath, queryFileOptions);
   if (queryFile.error) {
     throw new Error(queryFile.error);
   }
   return queryFile;
-}
+};
