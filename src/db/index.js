@@ -1,9 +1,7 @@
 const pgp = require('pg-promise')();
 
-const db = pgp({
+module.exports = exports = pgp({
   user: 'genious',
   database: 'genious',
   application_name: 'genious',
 });
-
-module.exports = exports = db;
