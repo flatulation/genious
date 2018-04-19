@@ -21,6 +21,7 @@
             "always"
         ],
         "no-unused-vars": "warn",
-        "no-console": "off"
+        "no-console": "off",
+        "eol-last": "error"
     }
 }
