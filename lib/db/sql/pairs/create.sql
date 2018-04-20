@@ -1,4 +1,4 @@
-CREATE TABLE pairs (
+CREATE TABLE IF NOT EXISTS pairs (
     user_id bigint,
     first text NOT NULL,
     second text NOT NULL,
@@ -6,13 +6,13 @@ CREATE TABLE pairs (
     UNIQUE (user_id, first, second, third)
 );
 
-CREATE INDEX
+CREATE INDEX IF NOT EXISTS pairs_first_second_third
 ON pairs (first, second, third);
 
-CREATE INDEX
+CREATE INDEX IF NOT EXISTS pairs_third
 ON pairs (third);
 
-CREATE FUNCTION get_third_word(text, text) RETURNS text AS $get_third_word$
+CREATE OR REPLACE FUNCTION get_third_word(text, text) RETURNS text AS $get_third_word$
     DECLARE
         third text;
     BEGIN
