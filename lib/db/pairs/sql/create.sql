@@ -6,13 +6,13 @@ CREATE TABLE pairs (
     UNIQUE (user_id, first, second, third)
 );
 
-CREATE INDEX pairs_first_second_third 
+CREATE INDEX
 ON pairs (first, second, third);
 
-CREATE INDEX pairs_third
+CREATE INDEX
 ON pairs (third);
 
-CREATE FUNCTION get_third_word(text, text) RETURNS text AS $$
+CREATE FUNCTION get_third_word(text, text) RETURNS text AS $get_third_word$
     DECLARE
         third text;
     BEGIN
@@ -29,4 +29,4 @@ CREATE FUNCTION get_third_word(text, text) RETURNS text AS $$
 
         RETURN third;
     END;
-$$ LANGUAGE plpgsql STRICT
+$get_third_word$ LANGUAGE plpgsql STRICT
